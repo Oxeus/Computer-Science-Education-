@@ -1,0 +1,6 @@
+Names               Home Stars          Distances           
+------------------------------------------------------------
+Andorian            Epsilon Indi        11.81               
+Human               Sol                 0.0                 
+Iranian             Iran                45                  
+Vulcan              40 Eridani A        16.454              
