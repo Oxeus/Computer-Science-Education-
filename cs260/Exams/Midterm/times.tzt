@@ -1,0 +1,10 @@
+total 156
+-rw------- 1 adam.lafleur students 36960 Feb  7 20:35 dlist.cpp
+-rw------- 1 adam.lafleur students   589 Feb  7 20:35 dlist.h
+-rw------- 1 adam.lafleur students  1607 Feb  7 20:40 instructions.txt
+-rwx------ 1 adam.lafleur students 50312 Feb  7 20:35 main
+-rw------- 1 adam.lafleur students   500 Feb  7 20:34 main.cpp
+-rw------- 1 adam.lafleur students 37736 Feb  7 20:35 main.o
+-rw------- 1 adam.lafleur students   174 Feb  7 19:40 makefile
+-rwx------ 1 adam.lafleur students  6201 Feb  7 19:56 supplied.o
+-rw------- 1 adam.lafleur students     0 Feb 11 09:44 times.tzt

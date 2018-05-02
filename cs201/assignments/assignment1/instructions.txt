@@ -1,0 +1,93 @@
+CS201 ASSIGNMENT 1 INSTRUCTIONS
+-------------------------------
+
+First, your program should print out either "byte order: big-endian" or
+"byte order: little-endian" depending on the characteristics of the machine
+your code is running on. Your program should figure this out at run time,
+not at compile time.
+
+Then, using scanf() and printf(), write a program that requests numbers from the
+user (typed in decimal) and then prints each number out in a variety of formats.
+
+For each number typed in, your program should print out two lines:
+
+    first line:
+        * integer, right justified in a 10 character field
+        * hex representation of the integer (the 4-byte actual value that is
+            independent of the machine's endian-ness)
+    second line:
+        * floating, right justified in a 10 character field, with 2 digits to
+            the right of the decimal point
+        * hex representation of the floating number (the 4-byte actual value
+            that is independent of the machine's endian-ness). Do not use C99's
+            %a or %A format specifier for this. You are required to use the %X
+            (NOT the %x) format specifier.
+
+Your program should repeatedly ask for input until the user types in a zero, and
+then it should exit. Each number in the input will be an integer, expressed as a
+decimal number. Some of the numbers will be negative, expressed like this: -3.
+You do not need to worry about bad input. I will run your code with a script
+that does not do this.
+
+Your program's output should be formatted as shown in asgmt01.output.txt
+(including uppercase vs. lowercase). I use scripts to grade assignments, and if
+your output is formatted "creatively" (i.e. different from what's requested),
+you will lose points for that.
+
+Start with file a01.c.
+
+Upload your work as a01.c.
+
+----------------------------------------------------------------------
+
+REQUIRED PLATFORM
+
+I grade your code on syccuxas01.pcc.edu. Your code is required to compile and
+run correctly on that machine.
+
+COMPILING YOUR CODE
+
+You are required to compile your code with the following flags:
+
+-m32 -std=gnu11 -Wall -g
+
+GRADING YOUR CODE
+
+Your code needs to compile without errors or warnings and run correctly. Code
+that does not compile will receive zero points. Code that crashes, at any
+point, will receive zero points.
+
+If you are compiling your code on a Mac or using a compiler other than gcc
+then there is a very real possibility that your program will work on your
+machine but will crash (or fail another way) on the PCC server with gcc. 
+
+I use scripts to grade your code. Because of this, it is very important that
+you submit your code with the file name that was requested. If you change the
+file name, my scripts will crash, your work will not be graded, you will have
+to resubmit a corrected version of your work, and you will lose points.
+
+My scripts produce a log file containing your code, compiler warnings and errors
+(if any), your code's output, and some statistics that are useful to me. I then
+personally go through that log file to produce your grade. In other words, the
+scripts don't generate your grade, they just make it more convenient for me to
+generate your grade.
+
+TO SUBMIT THIS ASSIGNMENT
+
+Submit the requested file to Desire2Learn.
+
+    * Be certain to check that you completed the upload successfully. After you
+        click the Upload File button, you must also click the SUBMIT ASSIGNMENT
+        button. This is very easy to forget. If you do not do this, I will not
+        see your work and you will get a grade of zero for the assignment. I
+        would recommend entering an email address so you can be notified that
+        the upload was completed successfully.
+    * You may upload as many versions as you wish prior to the due date. I will
+        only see and grade the final one. You will not be able to upload
+        assignments after the due date.
+
+Points will be deducted for uploading a file with a name that is not as
+specified. Every term I get a few students whose approach to following
+directions is, shall we say, "creative." I encourage creativity in general, but
+there are places where it is not appropriate.
+

@@ -1,0 +1,17 @@
+CC = gcc
+CFLAGS = -Wall -g -O3
+PROFFLAGS = -pg
+
+combines:	combines.o combine.o vec.o
+
+combines.o:	combine.h vec.h
+
+combine.o:	combine.h vec.h
+
+vec.o:		combine.h vec.h
+
+%.o : %.c
+		$(CC) -c $(CPPFLAGS) $(CFLAGS) $< $(PROFFLAGS)
+
+% : %.o
+		$(CC) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@ $(PROFFLAGS)

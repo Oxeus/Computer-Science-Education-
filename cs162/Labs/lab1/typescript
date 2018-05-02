@@ -1,0 +1,213 @@
+Script started on Sat 14 Jan 2017 03:50:40 PM PST
+adam.lafleur@syccuxas01:~/cs162/Labs/Lab1> vim project1.cpp [K
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"project1.cpp" 90L, 2121C[>c[1;1H[34m//Programmed by: Adam La Fleur
+//Assignment: Lab 1
+//Course: CS162
+//Date: January 15, 2016[m
+
+[35m#include [m[31m<iostream>[m
+[35m#include [m[31m<iomanip>[m
+
+[33musing[m [32mnamespace[m std;
+
+[32mint[m main()
+{[13;9H[32mchar[m answer;[14;9H[32mbool[m answer_loop = [31mtrue[m;[15;9H[32mint[m choice = [31m0[m;[16;9H[32mdouble[m wtPlanet, wtEarth;[17;9H[32mdouble[m gEarth = [31m9.81[m, gPlanet = [31m0[m;[18;9H[32mdouble[m [32mconst[m gMoon = [31m1.622[m, gMercury = [31m3.7[m, gVenus = [31m8.87[m, gJupiter = [31m24.79[m;[19;9H[33mwhile[m (answer_loop)[20;9H{[21;17Hcout << [31m"Planet Weight Finder"[m << endl << [31m"--------------------"[m << endl[22;25H<< [31m"Planet List[m[35m\n[m[31m"[m[23;25H<< [31m" 1 - Moon.[m[35m\n[m[31m"[m[24;139H4,24[10CTop[4;24H[?12l[?25h[?25l[24;139H5,0-1[5;1H[?12l[?25h[?25l[24;139H6,19 [6;19H[?12l[?25h[?25l[24;139H7,18[7;18H[?12l[?25h[?25l[24;139H8,0-1[8;1H[?12l[?25h[?25l[24;139H9,20 [9;20H[?12l[?25h[?25l[24;139H10,0-1[10;1H[?12l[?25h[?25l[11;9H[46m()[m[24;140H1,10 [11;10H[?12l[?25h[?25l()[24;140H2,1 [12;1H[?12l[?25h[?25l[24;140H3,13-20[13;20H[?12l[?25h[?25l[24;140H4,17-24[14;24H[?12l[?25h[?25l[24;140H5,16-23[15;23H[?12l[?25h[?25l[24;140H6,17-24[16;24H[?12l[?25h[?25l[24;140H7[17;24H[?12l[?25h[?25l[24;140H8[18;24H[?12l[?25h[?25l[24;140H9[19;24H[?12l[?25h[?25l[24;139H20,2-9  [20;9H[?12l[?25h[?25l[24;140H1,10-24[21;24H[?12l[?25h[?25l[24;140H2,3-24 [22;24H[?12l[?25h[?25l[24;140H3[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H<< [31m" 2 - Mercury.[m[35m\n[m[31m"[m[24;1H[K[24;139H24,3-24[8C1%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H<< [31m" 3 - Venus.[m[35m\n[m[31m"[m[24;139H[K[24;139H25,3-24[8C2%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H<< [31m" 4 - Jupiter.[m[35m\n[m[31m"[m[24;139H[K[24;139H26,3-24[8C4%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H<< endl;[24;139H[K[24;139H27,3-24[8C5%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;17Hcout << [31m"What is your weight on earth: "[m;[24;139H[K[24;139H28,10-24[7C7%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;17Hcin >> wtEarth;[24;139H[K[24;139H29,10-24[7C8%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;17H[33mif[m (wtEarth >= [31m0[m)[24;139H[K[24;139H30,10-24      10%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;17H{[24;139H[K[24;139H31,3-17[7C11%[23;17H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25Hcout << endl << [31m"What is your planet choice: "[m;[24;139H[K[24;139H32,3-24[7C13%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25Hcin >> choice;[24;139H[K[24;139H33,3-24[7C14%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25Hcout << endl;[24;139H[K[24;139H34,3-24[7C16%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H[33mswitch[m (choice)[24;139H[K[24;139H35,3-24[7C17%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H{[24;139H[K[24;139H36,3-24[7C19%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H[33mcase[m [31m1[m:[24;139H[K[24;139H37,3-24[7C20%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33HgPlanet = gMoon;[24;139H[K[24;139H38,3-24[7C22%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33HwtPlanet = wtEarth * (gPlanet / gEarth);[24;139H[K[24;139H39,3-24[7C23%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33Hcout << fixed << setprecision([31m2[m) << [31m"Your weight on the moon is "[m << wtPlanet << [31m"."[m << endl;[24;139H[K[24;139H40,3-24[7C25%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33H[33mbreak[m;[24;139H[K[24;139H41,3-24[7C26%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;139H[K[24;139H42,0-1[8C28%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H[33mcase[m [31m2[m:[24;139H[K[24;139H43,3-24[7C29%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33HgPlanet = gMercury;[24;139H[K[24;139H44,3-24[7C31%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33HwtPlanet = wtEarth * (gPlanet / gEarth);[24;139H[K[24;139H45,3-24[7C32%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33Hcout << fixed << setprecision([31m2[m) << [31m"Your weight on Mercury is "[m << wtPlanet << [31m"."[m << endl;[24;139H[K[24;139H46,3-24[7C34%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33H[33mbreak[m;[24;139H[K[24;139H47,3-24[7C35%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;139H[K[24;139H48,0-1[8C37%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H[33mcase[m [31m3[m:[24;139H[K[24;139H49,3-24[7C38%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33HgPlanet = gVenus;[24;139H[K[24;139H50,3-24[7C40%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33HwtPlanet = wtEarth * (gPlanet / gEarth);[24;139H[K[24;139H51,3-24[7C41%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33Hcout << fixed << setprecision([31m2[m) << [31m"Your weight on Venus is "[m << wtPlanet << [31m"."[m << endl;[24;139H[K[24;139H52,3-24[7C43%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33H[33mbreak[m;[24;139H[K[24;139H53,3-24[7C44%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;139H[K[24;139H54,0-1[8C46%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H[33mcase[m [31m4[m:[24;139H[K[24;139H55,3-24[7C47%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33HgPlanet = gJupiter;[24;139H[K[24;139H56,3-24[7C49%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33HwtPlanet = wtEarth * (gPlanet / gEarth);[24;139H[K[24;139H57,3-24[7C50%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33Hcout << fixed << setprecision([31m2[m) << [31m"Your weight on Juptier is "[m << wtPlanet << [31m"."[m << endl;[24;139H[K[24;139H58,3-24[7C52%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33H[33mbreak[m;[24;139H[K[24;139H59,3-24[7C53%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H[33mdefault[m:[24;139H[K[24;139H60,3-24[7C55%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33Hcout << [31m"The choice you entered is not valid."[m << endl;[24;139H[K[24;139H61,3-24[7C56%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33H[33mbreak[m;[24;139H[K[24;139H62,3-24[7C58%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H}[24;139H[K[24;139H63,3-24[7C59%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25Hcout << [31m"Do you want to continue (y or n): "[m;[24;139H[K[24;139H64,3-24[7C61%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25Hcin >> answer;[24;139H[K[24;139H65,3-24[7C62%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25Hcout << endl;[24;139H[K[24;139H66,3-24[7C64%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H[33mif[m (answer == [31m'y'[m)[24;139H[K[24;139H67,3-24[7C65%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H{[24;139H[K[24;139H68,3-24[7C67%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33Hanswer_loop = [31mtrue[m;[24;139H[K[24;139H69,3-24[7C68%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H}[24;139H[K[24;139H70,3-24[7C70%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H[33melse[m [33mif[m (answer == [31m'n'[m)[24;139H[K[24;139H71,3-24[7C71%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H{[24;139H[K[24;139H72,3-24[7C73%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33Hanswer_loop = [31mfalse[m;[24;139H[K[24;139H73,3-24[7C74%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H}[24;139H[K[24;139H74,3-24[7C76%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H[33melse[m[24;139H[K[24;139H75,3-24[7C77%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H{[24;139H[K[24;139H76,3-24[7C79%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33Hcout << [31m"The choice that you have entered is invalid, returning to the menu."[m << endl;[24;139H[K[24;139H77,3-24[7C80%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33Hcout << endl;[24;139H[K[24;139H78,3-24[7C82%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;33Hanswer_loop = [31mtrue[m;[24;139H[K[24;139H79,3-24[7C83%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25H}[24;139H[K[24;139H80,3-24[7C85%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;17H}[24;139H[K[24;139H81,3-17[7C86%[23;17H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;17H[33melse[m[24;139H[K[24;139H82,6-20[7C88%[23;20H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;17H{[24;139H[K[24;139H83,3-17[7C89%[23;17H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25Hcout << endl;[24;139H[K[24;139H84,3-24[7C91%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25Hcout << [31m"The weight you entered is invalid. Returning to menu."[m << endl;[24;139H[K[24;139H85,3-24[7C92%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25Hcout << endl;[24;139H[K[24;139H86,3-24[7C94%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[19;17H[46m{[23;17H}[m[24;139H[K[24;139H87,3-17[7C95%[23;17H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[18;17H{[22;17H}[23;9H}[24;139H[K[24;139H88,2-9[8C97%[23;9H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9H[33mreturn[m [31m0[m;[24;139H[K[24;139H89,10-17      98%[23;17H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H}[24;139H[K[24;139H90,1[10CBot[23;1H[?12l[?25h[?25l[24;139H[K[24;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"project1.cpp" 90L, 2121C written
+[?1l>[?12l[?25h[?1049ladam.lafleur@syccuxas01:~/cs162/Labs/Lab1> ls
+[0m[00;32mproj1[0m  [00mproject1.cpp[0m  [00mtypescript[0m
+adam.lafleur@syccuxas01:~/cs162/Labs/Lab1> rm proj1
+adam.lafleur@syccuxas01:~/cs162/Labs/Lab1> ls
+[0m[00mproject1.cpp[0m  [00mtypescript[0m
+adam.lafleur@syccuxas01:~/cs162/Labs/Lab1> g++ -o proj1 project1.cpp 
+adam.lafleur@syccuxas01:~/cs162/Labs/Lab1> ls
+[0m[00;32mproj1[0m  [00mproject1.cpp[0m  [00mtypescript[0m
+adam.lafleur@syccuxas01:~/cs162/Labs/Lab1> ./proj1 
+Planet Weight Finder
+--------------------
+Planet List
+ 1 - Moon.
+ 2 - Mercury.
+ 3 - Venus.
+ 4 - Jupiter.
+
+What is your weight on earth: 165
+
+What is your planet choice: 1
+
+Your weight on the moon is 27.28.
+Do you want to continue (y or n): y
+
+Planet Weight Finder
+--------------------
+Planet List
+ 1 - Moon.
+ 2 - Mercury.
+ 3 - Venus.
+ 4 - Jupiter.
+
+What is your weight on earth: 165
+
+What is your planet choice: 1 2
+
+Your weight on Mercury is 62.23.
+Do you want to continue (y or n): y
+
+Planet Weight Finder
+--------------------
+Planet List
+ 1 - Moon.
+ 2 - Mercury.
+ 3 - Venus.
+ 4 - Jupiter.
+
+What is your weight on earth: 165
+
+What is your planet choice: 3
+
+Your weight on Venus is 149.19.
+Do you want to continue (y or n): y
+
+Planet Weight Finder
+--------------------
+Planet List
+ 1 - Moon.
+ 2 - Mercury.
+ 3 - Venus.
+ 4 - Jupiter.
+
+What is your weight on earth: 165
+
+What is your planet choice: 4
+
+Your weight on Juptier is 416.96.
+Do you want to continue (y or n): y
+
+Planet Weight Finder
+--------------------
+Planet List
+ 1 - Moon.
+ 2 - Mercury.
+ 3 - Venus.
+ 4 - Jupiter.
+
+What is your weight on earth: 1 -165
+
+The weight you entered is invalid. Returning to menu.
+
+Planet Weight Finder
+--------------------
+Planet List
+ 1 - Moon.
+ 2 - Mercury.
+ 3 - Venus.
+ 4 - Jupiter.
+
+What is your weight on earth: 165
+
+What is your planet choice: 5
+
+The choice you entered is not valid.
+Do you want to continue (y or n): y
+
+Planet Weight Finder
+--------------------
+Planet List
+ 1 - Moon.
+ 2 - Mercury.
+ 3 - Venus.
+ 4 - Jupiter.
+
+What is your weight on earth: 165
+
+What is your planet choice: 1
+
+Your weight on the moon is 27.28.
+Do you want to continue (y or n): h
+
+The choice that you have entered is invalid, returning to the menu.
+
+Planet Weight Finder
+--------------------
+Planet List
+ 1 - Moon.
+ 2 - Mercury.
+ 3 - Venus.
+ 4 - Jupiter.
+
+What is your weight on earth: 165
+
+What is your planet choice: 1
+
+Your weight on the moon is 27.28.
+Do you want to continue (y or n): n
+
+adam.lafleur@syccuxas01:~/cs162/Labs/Lab1> exit
+exit
+
+Script done on Sat 14 Jan 2017 03:54:08 PM PST

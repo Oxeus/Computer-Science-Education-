@@ -1,0 +1,113 @@
+CS201 ASSIGNMENT 2 INSTRUCTIONS
+-------------------------------
+
+In the following assignment, you will be asked to write a "math library"
+function. You will be writing the function in assembly language, using gcc's
+inline assembler. Class code files asm.c and cpuid.c are good models for how
+to write assembly code for gcc.
+
+You can use a mixture of C code and assembly code for these assignments, but all
+floating point calculations (including comparisons) must be done in assembly
+language. You should use C only for support tasks like defining and initializing
+local variables, returning a value from the function, etc.
+
+Your assembly code should work in the following way:
+
+    1. Load values from the function's arguments and local variables onto the
+        floating point stack (local variables can be initialized first by C code
+        as long as no calculations are performed).
+    2. Perform the required calculation entirely within the floating point
+        stack. Using stack comments in this code will help you keep track of
+        what's going on. (A stack comment is a comment that specifies what is
+        supposed to be on the floating point stack after that instruction has
+        executed. Or you can write stack comments to specify the situation
+        before the instruction executes if you prefer.)
+    3. Store the calculated result from the floating point stack to a local
+        variable
+    4. Return that the value of that local variable with a C 'return' statement.
+
+The IA-32 Architecture includes the floating point instructions needed to
+implement these functions (they all start with the letter 'F'). You will save
+yourself a lot of work if you carefully choose the right instructions. This is a
+large and powerful instruction set, and you should make use of that power
+instead of "re-inventing the wheel." In other words, don't spend a lot of time
+writing a lot of dumb code. Instead, spend your time thinking first, and you
+will be able to write a smaller amount of smart code.
+
+In your assembly code, you are required to use only the syntax demonstrated in
+course file objectCode/asm.c. You are not allowed to use any other GAS syntax,
+such as %0, or any specifier other than "=m" in an "output" or "m" in an
+"input."
+
+       **********************************************************
+       * THE USE OF ANY PROHIBITED SYNTAX IN YOUR ASSEMBLY CODE *
+       *     WILL RESULT IN A SIGNIFICANT LOSS OF POINTS.       *
+       **********************************************************
+
+--------------------------------------------------------------------------------
+
+In hullSpeed(), write FPU assembly code to calculate the "hull speed" of a boat
+according to the formula 1.34*sqrt(lgth) where lgth is the length in feet of the
+boat at the waterline, and the computed speed is specified in knots.
+
+Start with the provided code file a02.c. Upload your code as a02.c.
+
+--------------------------------------------------------------------------------
+
+HOW TO COMPILE THE CODE FOR ASSIGNMENT 2
+
+Because the code for this assignment calls the sqrt() function
+from math.h, you will need to compile it as follows:
+
+    gcc <required flags> a02p.c -lm -o a02p
+
+--------------------------------------------------------------------------------
+
+REQUIRED PLATFORM
+
+I grade your code on syccuxas01.pcc.edu. Your code is required to compile and
+run correctly on that machine.
+
+COMPILING YOUR CODE
+
+You are required to compile your code with the following flags (plus the math
+library -- see above):
+
+-m32 -std=gnu11 -Wall -g
+
+GRADING YOUR CODE
+
+Your code needs to compile without errors or warnings and run correctly. Code
+that does not compile will receive zero points. Code that crashes will receive
+zero points.
+
+I use bash scripts to grade your code. Because of this, it is very important
+that you submit your code with the file name that was requested. If you change
+the file name, my scripts will crash, your work will not be graded, you will
+have to resubmit a corrected version of your work, and you will lose points.
+
+My scripts produce a log file containing your code, compiler warnings and errors
+(if any), your code's output, and some statistics that are useful to me. I then
+personally go through that log file to produce your grade. In other words, the
+scripts don't generate your grade, they just make it more convenient for me to
+generate your grade.
+
+TO SUBMIT THIS ASSIGNMENT
+
+Submit the requested file to Desire2Learn.
+
+    * Be certain to check that you completed the upload successfully. After you
+        click the Upload File button, you must also click the SUBMIT ASSIGNMENT
+        button. This is very easy to forget. If you do not do this, I will not
+        see your work and you will get a grade of zero for the assignment. I
+        would recommend entering an email address so you can be notified that
+        the upload was completed successfully.
+    * You may upload as many versions as you wish prior to the due date. I will
+        only see and grade the final one. You will not be able to upload
+        assignments after the due date.
+
+Points will be deducted for uploading a file with a name that is not as
+specified. Every term I get a few students whose approach to following
+directions is, shall we say, "creative." I encourage creativity in general, but
+there are places where it is not appropriate.
+

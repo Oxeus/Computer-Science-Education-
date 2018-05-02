@@ -1,0 +1,63 @@
+== Programming Assignment ==
+
+For this assignment you will write a program that reads in mining production
+data from various stations and print a report of the data. Your program will
+rely on STL data structures of your choice (most like maps and vectors).
+
+The primary objective of this assignment is to use good object oriented design
+to handle complex data. A secondary objective is to learn how to use STL data
+structures.
+
+Your program should use good design methodologies and good abstraction. From
+the point of view of the showreport.cpp file you only need two classess:
+productiondb and reporter. The productiondb is an abstraction for holding all
+of the collected production data and the reporter is a class that can generate
+various reports from a given database.
+
+Your design and implementation of the productiondb class itself will probably
+require additional classes for organizing and managing the data. You have a
+lot of liberty in how you want to do the organize this. My solution has 4
+classes related to the production database:
+
+- productiondb -- the main database class that contains a mapping of station
+  name to stationdata.
+- stationdata -- a class that holds all data for a station organized by
+  year. For each year of data there is a yeardata object.
+- yeardata -- a class that holds all data for a year broken down by
+  months. This has an array of resourcecount objects, one per month.
+- resourcecount -- a class that holds a mapping between resource and amount of
+  that resource that has been seen so far.
+
+This is not the only way to organize the data. You are welcome to create any
+additional classes that you need.
+
+Below are the specific external and internal requirements for this
+assignment. Your program will be evaluated based on these requirements in
+addition to the requirements in the grading matrix (see the D2L topic on the
+programming grading matrix).
+
+== External Requirements ==
+
+- The main driver (showreport.cpp) will provide a sequence of entries to the
+  production database which need to be stored in the database.
+- A report generator class will need to generate a report identical to the
+  provided example output files.
+
+== Internal Requirements ==
+
+- No memory leaks.
+- No crashes.
+- No infinite loops.
+- The program must use the supplied showrerpot.cpp file, unmodified, as the
+  main driver.
+- The production database must be 100% data-driven. That is, it must be
+  general enough to work with any number of stations, any number of resources,
+  and any number of years. You can safely assume that all years have 12 months.
+- The production database has no idea what sort of report will be generated so
+  the database must keep all of the data. In particular, the database cannot
+  anticipate that a "month-by-month" summary will be generated later.
+- The production database MUST NOT print any data. There should be NO output
+  operations in the production database.
+
+
+

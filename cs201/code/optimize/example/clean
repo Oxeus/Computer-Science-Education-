@@ -1,0 +1,6 @@
+#! /bin/bash
+
+rm *.o
+rm combines
+rm profile.data
+rm gmon.out

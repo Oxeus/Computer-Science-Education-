@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# call with two numeric command line arguments:
+#   number of times to run each algorithm version
+#   vector length
+
+if (($# != 2)) ; then
+    echo 'call with 2 arguments: nTimes, vLength'
+    exit 1
+fi
+
+data='profile.data'                         # file name for the profile data
+
+if [ -f $data ] ; then
+    rm $data                                # remove old profile data
+fi
+
+# run each of the 5 algorithm versions the specified number of times
+#   with the specified vector length
+for ((i=1 ; $i <= 5 ; i=$(( i + 1 )) )) ; do
+    combines $1 $2 $i >> $data
+    echo >> $data
+    gprof -b combines >> $data              # produce profile output
+    echo -e '\n===============================================\n' >> $data
+done
+
+exit 0

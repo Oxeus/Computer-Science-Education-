@@ -1,0 +1,1 @@
+gcc -m32 -g -ftrapv expr3.c -o expr3trap

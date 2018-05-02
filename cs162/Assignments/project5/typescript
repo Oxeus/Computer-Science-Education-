@@ -1,0 +1,465 @@
+Script started on Wed 08 Mar 2017 12:11:37 AM PST
+adam.lafleur@syccuxas01:~/cs162/projects/project5> valgri[K[Krind ./
+a.out          book.h         booklist.h     main.cpp       typescript
+book.cpp       booklist.cpp   inventory.txt  makefile       
+adam.lafleur@syccuxas01:~/cs162/projects/project5> valgrind ./[K[K./a.out 
+==3215== Memcheck, a memory error detector
+==3215== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==3215== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==3215== Command: ./a.out
+==3215== 
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+1
+Title: A Tale of Two Cities
+Count: 15
+Price: 15.99
+-------------------------------------
+Title: Alice in Wonderland
+Count: 11
+Price: 14.99
+-------------------------------------
+Title: Around the World in 80 Days
+Count: 3
+Price: 11.99
+-------------------------------------
+Title: Flatland: A Romance of Many Dimensions
+Count: 18
+Price: 8.99
+-------------------------------------
+Title: The House of the Seven Gables
+Count: 13
+Price: 12.99
+-------------------------------------
+Title: Twenty Thousand Leagues Under the Sea
+Count: 10
+Price: 20.99
+-------------------------------------
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+4
+Enter title: Test
+Enter count: 11
+Enter price: 10.00
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+1
+Title: A Tale of Two Cities
+Count: 15
+Price: 15.99
+-------------------------------------
+Title: Alice in Wonderland
+Count: 11
+Price: 14.99
+-------------------------------------
+Title: Around the World in 80 Days
+Count: 3
+Price: 11.99
+-------------------------------------
+Title: Flatland: A Romance of Many Dimensions
+Count: 18
+Price: 8.99
+-------------------------------------
+Title: Test
+Count: 11
+Price: 10.00
+-------------------------------------
+Title: The House of the Seven Gables
+Count: 13
+Price: 12.99
+-------------------------------------
+Title: Twenty Thousand Leagues Under the Sea
+Count: 10
+Price: 20.99
+-------------------------------------
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+5
+Enter title: Test
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+1
+Title: A Tale of Two Cities
+Count: 15
+Price: 15.99
+-------------------------------------
+Title: Alice in Wonderland
+Count: 11
+Price: 14.99
+-------------------------------------
+Title: Around the World in 80 Days
+Count: 3
+Price: 11.99
+-------------------------------------
+Title: Flatland: A Romance of Many Dimensions
+Count: 18
+Price: 8.99
+-------------------------------------
+Title: The House of the Seven Gables
+Count: 13
+Price: 12.99
+-------------------------------------
+Title: Twenty Thousand Leagues Under the Sea
+Count: 10
+Price: 20.99
+-------------------------------------
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+1
+Title: A Tale of Two Cities
+Count: 15
+Price: 15.99
+-------------------------------------
+Title: Alice in Wonderland
+Count: 11
+Price: 14.99
+-------------------------------------
+Title: Around the World in 80 Days
+Count: 3
+Price: 11.99
+-------------------------------------
+Title: Flatland: A Romance of Many Dimensions
+Count: 18
+Price: 8.99
+-------------------------------------
+Title: The House of the Seven Gables
+Count: 13
+Price: 12.99
+-------------------------------------
+Title: Twenty Thousand Leagues Under the Sea
+Count: 10
+Price: 20.99
+-------------------------------------
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+The House         5
+Enter title: The House of the Seven Gables
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+1
+Title: A Tale of Two Cities
+Count: 15
+Price: 15.99
+-------------------------------------
+Title: Alice in Wonderland
+Count: 11
+Price: 14.99
+-------------------------------------
+Title: Around the World in 80 Days
+Count: 3
+Price: 11.99
+-------------------------------------
+Title: Flatland: A Romance of Many Dimensions
+Count: 18
+Price: 8.99
+-------------------------------------
+Title: Twenty Thousand Leagues Under the Sea
+Count: 10
+Price: 20.99
+-------------------------------------
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+4
+Enter title: Zoology
+Enter count: 20
+Enter price: 2.14
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+1
+Title: A Tale of Two Cities
+Count: 15
+Price: 15.99
+-------------------------------------
+Title: Alice in Wonderland
+Count: 11
+Price: 14.99
+-------------------------------------
+Title: Around the World in 80 Days
+Count: 3
+Price: 11.99
+-------------------------------------
+Title: Flatland: A Romance of Many Dimensions
+Count: 18
+Price: 8.99
+-------------------------------------
+Title: Twenty Thousand Leagues Under the Sea
+Count: 10
+Price: 20.99
+-------------------------------------
+Title: Zoology
+Count: 20
+Price: 2.14
+-------------------------------------
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+5
+Enter title: Zoology
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+1
+Title: A Tale of Two Cities
+Count: 15
+Price: 15.99
+-------------------------------------
+Title: Alice in Wonderland
+Count: 11
+Price: 14.99
+-------------------------------------
+Title: Around the World in 80 Days
+Count: 3
+Price: 11.99
+-------------------------------------
+Title: Flatland: A Romance of Many Dimensions
+Count: 18
+Price: 8.99
+-------------------------------------
+Title: Twenty Thousand Leagues Under the Sea
+Count: 10
+Price: 20.99
+-------------------------------------
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+5
+Enter title: A Tasle     le of Two Cities
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+1
+Title: Alice in Wonderland
+Count: 11
+Price: 14.99
+-------------------------------------
+Title: Around the World in 80 Days
+Count: 3
+Price: 11.99
+-------------------------------------
+Title: Flatland: A Romance of Many Dimensions
+Count: 18
+Price: 8.99
+-------------------------------------
+Title: Twenty Thousand Leagues Under the Sea
+Count: 10
+Price: 20.99
+-------------------------------------
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+4
+Enter title: A Small Sacrifics
+Enter count: 20
+Enter price: 12.99
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+1
+Title: A Small Sacrifics
+Count: 20
+Price: 12.99
+-------------------------------------
+Title: Alice in Wonderland
+Count: 11
+Price: 14.99
+-------------------------------------
+Title: Around the World in 80 Days
+Count: 3
+Price: 11.99
+-------------------------------------
+Title: Flatland: A Romance of Many Dimensions
+Count: 18
+Price: 8.99
+-------------------------------------
+Title: Twenty Thousand Leagues Under the Sea
+Count: 10
+Price: 20.99
+-------------------------------------
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+4
+Enter title: Othello
+Enter count: 20
+Enter price: 3.33
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+1
+Title: A Small Sacrifics
+Count: 20
+Price: 12.99
+-------------------------------------
+Title: Alice in Wonderland
+Count: 11
+Price: 14.99
+-------------------------------------
+Title: Around the World in 80 Days
+Count: 3
+Price: 11.99
+-------------------------------------
+Title: Flatland: A Romance of Many Dimensions
+Count: 18
+Price: 8.99
+-------------------------------------
+Title: Othello
+Count: 20
+Price: 3.33
+-------------------------------------
+Title: Twenty Thousand Leagues Under the Sea
+Count: 10
+Price: 20.99
+-------------------------------------
+---------------------------- Menu -------------------------------
+1 - Print all books
+2 - Markup or Markdown all prices
+3 - Change inventory count of a title
+4 - Add a Book
+5 - Delete a Book
+6 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+6
+-> Inventory Written Out <-
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+sh: pause: command not found
+==3215== 
+==3215== HEAP SUMMARY:
+==3215==     in use at exit: 72,704 bytes in 1 blocks
+==3215==   total heap usage: 45 allocs, 44 frees, 91,409 bytes allocated
+==3215== 
+==3215== LEAK SUMMARY:
+==3215==    definitely lost: 0 bytes in 0 blocks
+==3215==    indirectly lost: 0 bytes in 0 blocks
+==3215==      possibly lost: 0 bytes in 0 blocks
+==3215==    still reachable: 72,704 bytes in 1 blocks
+==3215==         suppressed: 0 bytes in 0 blocks
+==3215== Rerun with --leak-check=full to see details of leaked memory
+==3215== 
+==3215== For counts of detected and suppressed errors, rerun with: -v
+==3215== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
+adam.lafleur@syccuxas01:~/cs162/projects/project5> exit
+exit
+
+Script done on Wed 08 Mar 2017 12:17:12 AM PST

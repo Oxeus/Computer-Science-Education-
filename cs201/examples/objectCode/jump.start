@@ -1,0 +1,5 @@
+disp/x $eax
+disp/x $ebp
+b 13
+lay split
+r 3

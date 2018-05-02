@@ -1,0 +1,14 @@
+1) Give at least two examples from zuul-bad that demonstrated low cohesion.
+
+
+
+
+2) Give at least two examples from zuul-bad that demonstrated high coupling.
+
+
+
+
+3) Give at least two examples from zuul-good where the program was improved.
+
+
+

@@ -1,0 +1,150 @@
+Script started on Fri 27 Jan 2017 10:19:09 PM PST
+adam.lafleur@syccuxas01:~/cs162/Labs/lab3> vim lab3.cpp 
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"lab3.cpp" 104L, 2841C[>c[2;1H[34m//Initialize user-defined functions[m
+[32mint[m loadFile();
+[32mvoid[m salePrice();
+[32mvoid[m writeFile();
+
+[32mint[m main()
+{[9;9Hcout << [31m"Welcome to the repricing program."[m << endl << endl;[10;9Hcout << [31m"Reading the data from the file..."[m << endl;[11;9H[34m//Find the number of books in the file.[m[12;9HbookCount = loadFile();[13;9Hcout << [31m"Complete.[m[35m\n[m[31m"[m << endl;[14;9H[34m//Print out list of books until the books printed in the terminal has ree[15;1Hached the total book count, set precision to be fixed to 2 decimal places[m[16;9H[33mfor[m([32mint[m i = [31m0[m; i < bookCount; i++)[17;9H{[18;17Hcout << database[i].bookName << endl;[19;17Hcout << database[i].invCount << endl;[20;17Hcout << fixed << setprecision([31m2[m) << database[i].price << endl;[21;9H}[22;9Hcout << endl << [31m"The new prices of the books for 20[m[35m% o[m[31mff are: [m[35m\n[m[31m"[m << endd[23;1Hl;[24;63H38,24-31      31%[12;31H[?12l[?25h[?25l[24;64H9[13;31H[?12l[?25h[?25l[24;63H40[14;31H[?12l[?25h[?25l[24;64H1[16;31H[?12l[?25h[?25l[17;9H[46m{[21;9H}[m[24;64H2,2-9  [17;9H[?12l[?25h[?25l{[21;9H}[24;64H3,17-31[18;31H[?12l[?25h[?25l[24;64H4[19;31H[?12l[?25h[?25l[24;64H5[20;31H[?12l[?25h[?25l[17;9H[46m{[21;9H}[m[24;64H6,2-9  [21;9H[?12l[?25h[?25l[17;9H{[21;9H}[24;64H7,24-31[22;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9HsalePrice();[24;1H[K[24;63H48,13-20      32%[23;20H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9Hcout << endl << [31m"Loading the sales data into a file...[m[35m\n[m[31m"[m << endl;[24;63H[K[24;63H49,24-31      33%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9HwriteFile();[24;63H[K[24;63H50,13-20      34%[23;20H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9Hcout << [31m"Complete"[m << endl;[24;63H[K[24;63H51,24-31      36%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9H[33mreturn[m [31m0[m;[24;63H[K[24;63H52,11-24      37%[23;24H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[2;1H[46m{[23;1H}[m[24;63H[K[24;63H53,1[10C38%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[1;1H{[22;1H}[24;63H[K[24;63H54,0-1[8C39%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[34m//Load data into array from file[m[24;63H[K[24;63H55,31[9C40%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[32mint[m loadFile[46m()[m[24;63H[K[24;63H56,14[9C42%[23;14H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[22;13H()
+{[24;63H[K[24;63H57,1[10C43%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9Hifstream booksFile;[24;63H[K[24;63H58,20-27      44%[23;27H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9HbooksFile.open([31m"books.txt"[m);[24;63H[K[24;63H59,24-31      45%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9H[34m//Determine if file is open[m[24;63H[K[24;63H60,24-31      46%[23;31H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;9H[33mif[m (booksFile.is_open[46m()[m)[23;9H{[24;63H[K[24;63H61,24-31      48%[22;31H[?12l[?25h[?25l()[24;64H2,2-9  [23;9H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;17H[34m//Loop until end of file or until bookCount is less than the LIMM[23;1HIT value of 100, [m[24;63H[K[24;63H63,17-31      50%[22;31H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;17H[34m//also load into a char array the book names for 200 spaces; loaa[23;1Hd into struct array the bookName, invCount and price[m[24;63H[K[24;63H64,17-31      52%[22;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;17H[33mwhile[m (!booksFile.eof() && bookCount < LIMIT)[24;63H[K[24;63H65,17-31      53%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;17H{[24;63H[K[24;63H66,3-17[7C54%[23;17H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;25HbooksFile.get(database[bookCount].bookName, [31m200[m, [35m'\n'[m);[23;25HbooksFile >> database[bookCount].invCount;[24;63H[K[24;63H67,10-31      56%[22;31H[?12l[?25h[?25l[24;64H8[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25HbooksFile >> database[bookCount].price;[24;63H[K[24;63H69,10-31      57%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25HbooksFile.ignore([31m200[m, [35m'\n'[m);[24;63H[K[24;63H70,10-31      59%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;25HbookCount++;[24;63H[K[24;63H71,10-31      60%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[17;17H[46m{[23;17H}[m[24;63H[K[24;63H72,3-17[7C61%[23;17H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[10;9H[46m{[m[16;17H{[22;17H}[23;9H[46m}[m[24;63H[K[24;63H73,2-9[8C62%[23;9H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[9;9H{[22;9H}[23;9H[33melse[m cout << [31m"Unable to open file"[m;[24;63H[K[24;63H74,24-31      63%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9HbooksFile.close();[24;63H[K[24;63H75,19-26      65%[23;26H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9HbookCount = bookCount - [31m1[m;[24;63H[K[24;63H76,24-31      66%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9H[33mreturn[m bookCount;[24;63H[K[24;63H77,18-25      67%[23;25H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H}[24;63H[K[24;63H78,1[10C68%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H79,0-1[8C69%[23;1H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;1H[34m//Calculate the price of the boks after 20% discount and print the new prices too[23;1H the terminal along with the other information[m[24;63H[K[24;63H80,31[9C71%[22;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[32mvoid[m salePrice[46m()[m[24;63H[K[24;63H81,16[9C72%[23;16H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[22;15H()
+{[24;63H[K[24;63H82,1[10C73%[23;1H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;9H[33mfor[m ([32mint[m i = [31m0[m; i < bookCount; i++)[23;9H{[24;63H[K[24;63H83,24-31      75%[22;31H[?12l[?25h[?25l[24;64H4,2-9  [23;9H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;17Hcout << database[i].bookName << endl;[23;17Hcout << database[i].invCount << endl;[24;63H[K[24;63H85,17-31      78%[22;31H[?12l[?25h[?25l[24;64H6[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;17Hdatabase[i].price = database[i].price * [31m0.80[m;[24;63H[K[24;63H87,17-31      79%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;17Hcout << fixed << setprecision([31m2[m) << database[i].price << endl;[24;63H[K[24;63H88,17-31      80%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[18;9H[46m{[23;9H}[m[24;63H[K[24;63H89,2-9[8C81%[23;9H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[15;1H[46m{[m[17;9H{[22;9H}
+[46m}[m[24;63H[K[24;63H90,1[10C82%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[14;1H{[22;1H}[24;63H[K[24;63H91,0-1[8C84%[23;1H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;1H[34m//Write to a file called 'sales.txt' the new sales data along with book title ann[23;1Hd total count[m[24;63H[K[24;63H92,31[9C85%[22;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H[32mvoid[m writeFile[46m()[m[24;63H[K[24;63H93,16[9C86%[23;16H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[22;15H()
+{[24;63H[K[24;63H94,1[10C87%[23;1H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9Hofstream saleFile;[24;63H[K[24;63H95,19-26      89%[23;26H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9HsaleFile.open([31m"sales.txt"[m);[24;63H[K[24;63H96,24-31      90%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9H[33mfor[m ([32mint[m i = [31m0[m; i < bookCount; i++)[24;63H[K[24;63H97,24-31      91%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;9H{[24;63H[K[24;63H98,2-9[8C92%[23;9H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;17HsaleFile << database[i].bookName << endl;[24;63H[K[24;63H99,17-31      93%[23;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[23;17HsaleFile << database[i].invCount << endl;[24;63H[K[24;63H100,17-31     95%[23;31H[?12l[?25h[?25l[1;23r[1;1H[2M[1;24r[22;17HsaleFile << fixed << setprecision([31m2[m)<< database[i].price << endll[23;1H;[24;63H[K[24;63H101,17-31     96%[22;31H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[18;9H[46m{[23;9H}[m[24;63H[K[24;63H102,2-9[7C97%[23;9H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[17;9H{[22;9H}[23;9HsaleFile.close();[24;63H[K[24;63H103,18-25     98%[23;25H[?12l[?25h[?25l[1;23r[23;1H
+[1;24r[12;1H[46m{[23;1H}[m[24;63H[K[24;63H104,1[9CBot[23;1H[?12l[?25h[?25l[24;63H[K[24;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"lab3.cpp" 104L, 2841C written
+[?1l>[?12l[?25h[?1049ladam.lafleur@syccuxas01:~/cs162/Labs/lab3> g++ -o lab3 lab3.cpp 
+adam.lafleur@syccuxas01:~/cs162/Labs/lab3> ./lab3 
+Welcome to the repricing program.
+
+Reading the data from the file...
+Complete.
+
+The Goldfinch
+10
+6.99
+The Husband's Secret
+25
+9.99
+All the Light We Cannot See
+33
+10.99
+Yes Please
+12
+17.39
+What If?: Serious Scientific Answers
+43
+14.40
+The Book Thief
+35
+8.52
+Orphan Train
+12
+6.99
+Big Little Lies
+9
+3.99
+
+The new prices of the books for 20% off are: 
+
+The Goldfinch
+10
+5.59
+The Husband's Secret
+25
+7.99
+All the Light We Cannot See
+33
+8.79
+Yes Please
+12
+13.91
+What If?: Serious Scientific Answers
+43
+11.52
+The Book Thief
+35
+6.82
+Orphan Train
+12
+5.59
+Big Little Lies
+9
+3.19
+
+Loading the sales data into a file...
+
+Complete
+adam.lafleur@syccuxas01:~/cs162/Labs/lab3> ls
+[0m[00mbooks.txt[0m  [00;32mlab3[0m  [00mlab3.cpp[0m  [00msales.txt[0m  [00mtypescript[0m
+adam.lafleur@syccuxas01:~/cs162/Labs/lab3> cat sales.txt
+The Goldfinch
+10
+5.59
+The Husband's Secret
+25
+7.99
+All the Light We Cannot See
+33
+8.79
+Yes Please
+12
+13.91
+What If?: Serious Scientific Answers
+43
+11.52
+The Book Thief
+35
+6.82
+Orphan Train
+12
+5.59
+Big Little Lies
+9
+3.19
+adam.lafleur@syccuxas01:~/cs162/Labs/lab3> exit
+exit
+
+Script done on Fri 27 Jan 2017 10:20:25 PM PST

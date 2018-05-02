@@ -1,0 +1,11 @@
+Week 1:	lab01
+Week 2: lab02
+Week 3: lab03
+Week 4: lab_sms
+Week 5: lab_zuul
+Week 6: lab_packages
+Week 7: lab_inheritance
+Week 8: -- no activities --
+Week 9: -- no activities --
+Week 10: lab_stl_list
+

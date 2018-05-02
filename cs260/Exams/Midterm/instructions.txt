@@ -1,0 +1,46 @@
+Proficiency Test Midterm
+
+Start with the code in ~mike.noel/classes/cs260/teacher/exams/midterm. You
+will want to copy the files into a directory of your own.
+
+File supplied.o contains code that can build, display, duplicate, and destroy
+a doubly linked list. 
+
+For this test, you will need to write the following functions in dlist.cpp,
+add function prototypes for them to dlist.h and invoke the functions in
+main.cpp. You should label the output of your test, such as "the list after
+removal:" etc.
+
+	  int countEven(node * head)        
+
+	  Recursively compute and return the number of nodes that contain an even
+	  number in the doubly linked list.
+
+	  int removeEven(node *& head)    
+
+	  Recursively remove all the nodes that contain even number in the doubly linked
+	  list and return the number of nodes removed.
+
+Use the supplied makefile for the project to build it. Please don't forget the
+supplied.o when generating the executable. 
+
+Run your program in valgrind and make sure there are no memory leaks. Assuming
+the executable file is named main you can use the following command to check
+for leaks:
+
+valgrind --tool=memcheck --leak-check=full ./main
+
+For test submission, copy the above function implementations into a file
+called solution.txt, then append the output of the app to the file as follows:
+
+./main >> solution.txt //assuming the executable is called main
+
+The solution.txt file should contain all of the source code from dlist.h and
+dlist.cpp as well as your output.
+
+Use the following command to turn in your midterm exam solution: 
+
+~mike.noel/bin/turnin cs260 solution.txt
+
+ 
+

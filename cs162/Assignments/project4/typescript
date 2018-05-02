@@ -1,0 +1,251 @@
+Script started on Tue 28 Feb 2017 06:28:14 PM PST
+adam.lafleur@syccuxas01:~/cs162/projects/project4> gdb
+[?1034hGNU gdb (GDB) 7.11
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-pc-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+(gdb) file ./[K[Kprog 
+Reading symbols from prog...done.
+(gdb) ru[K[Kbreak [Kpoi[K[K[K[Kk[K[K[Keak BookList::wr[K[Kredin[K[K[KadinFile()
+Breakpoint 1 at 0x401bc0
+(gdb) run
+Starting program: /home/student/adam.lafleur/cs162/projects/project4/prog 
+warning: File "/usr/local/lib64/libstdc++.so.6.0.22-gdb.py" auto-loading has been declined by your `auto-load safe-path' set to "$debugdir:$datadir/auto-load".
+To enable execution of this file add
+	add-auto-load-safe-path /usr/local/lib64/libstdc++.so.6.0.22-gdb.py
+line to your configuration file "/home/student/adam.lafleur/.gdbinit".
+To completely disable this security protection add
+	set auto-load safe-path /
+line to your configuration file "/home/student/adam.lafleur/.gdbinit".
+For more information about this security protection see the
+"Auto-loading safe path" section in the GDB manual.  E.g., run from the shell:
+	info "(gdb)Auto-loading safe path"
+
+Breakpoint 1, 0x0000000000401bc0 in BookList::readinFile() ()
+(gdb) 
+(gdb) info breakpoints
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x0000000000401bc0 <BookList::readinFile()+4>
+	breakpoint already hit 1 time
+(gdb) disable 1
+(gdb) tbree[Kak disable 1[C[C[C[C[C[Cinfo breakpoints[C[C[C[C[C[Crun[Kbreak BookList::readinFile()[1@t
+Note: breakpoint 1 (disabled) also set at pc 0x401bc0.
+Temporary breakpoint 2 at 0x401bc0
+(gdb) run
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+Starting program: /home/student/adam.lafleur/cs162/projects/project4/prog 
+warning: File "/usr/local/lib64/libstdc++.so.6.0.22-gdb.py" auto-loading has been declined by your `auto-load safe-path' set to "$debugdir:$datadir/auto-load".
+
+Temporary breakpoint 2, 0x0000000000401bc0 in BookList::readinFile() ()
+(gdb) 
+(gdb) cpo[K[K[Kcontinue
+Continuing.
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+---------------------------- Menu -------------------------------
+1 - Print all books.
+2 - Markup or Markdown all prices.
+3 - Change inventory count of a title.
+4 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+1
+
+There are 6 books.
+Title: Tweny Thousand Leagues Under the Sea
+Count: 10
+Price: 20.15
+-------------------------------------
+Title: A Tale of Two Cities
+Count: 15
+Price: 15.35
+-------------------------------------
+Title: The House of the Seven Gables
+Count: 13
+Price: 12.47
+-------------------------------------
+Title: Around the World in 80 Days
+Count: 3
+Price: 11.51
+-------------------------------------
+Title: Flatland: A Romance of Many Dimensions
+Count: 18
+Price: 8.63
+-------------------------------------
+Title: Alice in Wonderland
+Count: 11
+Price: 14.39
+-------------------------------------
+---------------------------- Menu -------------------------------
+1 - Print all books.
+2 - Markup or Markdown all prices.
+3 - Change inventory count of a title.
+4 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+4
+
+-> Inventory Written Out <-
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+[Inferior 1 (process 9548) exited normally]
+(gdb) exit
+Undefined command: "exit".  Try "help".
+(gdb) quit
+adam.lafleur@syccuxas01:~/cs162/projects/project4> .[K./prog 
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+---------------------------- Menu -------------------------------
+1 - Print all books.
+2 - Markup or Markdown all prices.
+3 - Change inventory count of a title.
+4 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+1
+
+There are 6 books.
+Title: Tweny Thousand Leagues Under the Sea
+Count: 10
+Price: 20.15
+-------------------------------------
+Title: A Tale of Two Cities
+Count: 15
+Price: 15.35
+-------------------------------------
+Title: The House of the Seven Gables
+Count: 13
+Price: 12.47
+-------------------------------------
+Title: Around the World in 80 Days
+Count: 3
+Price: 11.51
+-------------------------------------
+Title: Flatland: A Romance of Many Dimensions
+Count: 18
+Price: 8.63
+-------------------------------------
+Title: Alice in Wonderland
+Count: 11
+Price: 14.39
+-------------------------------------
+---------------------------- Menu -------------------------------
+1 - Print all books.
+2 - Markup or Markdown all prices.
+3 - Change inventory count of a title.
+4 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+2
+
+Is this a: 
+1 - Markup In Price
+2 - Markdown In Price
+Enter Choice: 1
+Enter percentage to markup: 30
+---------------------------- Menu -------------------------------
+1 - Print all books.
+2 - Markup or Markdown all prices.
+3 - Change inventory count of a title.
+4 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+1
+
+There are 6 books.
+Title: Tweny Thousand Leagues Under the Sea
+Count: 10
+Price: 26.20
+-------------------------------------
+Title: A Tale of Two Cities
+Count: 15
+Price: 19.96
+-------------------------------------
+Title: The House of the Seven Gables
+Count: 13
+Price: 16.21
+-------------------------------------
+Title: Around the World in 80 Days
+Count: 3
+Price: 14.96
+-------------------------------------
+Title: Flatland: A Romance of Many Dimensions
+Count: 18
+Price: 11.22
+-------------------------------------
+Title: Alice in Wonderland
+Count: 11
+Price: 18.71
+-------------------------------------
+---------------------------- Menu -------------------------------
+1 - Print all books.
+2 - Markup or Markdown all prices.
+3 - Change inventory count of a title.
+4 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+3
+
+Enter title to change: Alice in Wonderland
+Enter new inventory count: 30
+---------------------------- Menu -------------------------------
+1 - Print all books.
+2 - Markup or Markdown all prices.
+3 - Change inventory count of a title.
+4 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+1
+
+There are 6 books.
+Title: Tweny Thousand Leagues Under the Sea
+Count: 10
+Price: 26.20
+-------------------------------------
+Title: A Tale of Two Cities
+Count: 15
+Price: 19.96
+-------------------------------------
+Title: The House of the Seven Gables
+Count: 13
+Price: 16.21
+-------------------------------------
+Title: Around the World in 80 Days
+Count: 3
+Price: 14.96
+-------------------------------------
+Title: Flatland: A Romance of Many Dimensions
+Count: 18
+Price: 11.22
+-------------------------------------
+Title: Alice in Wonderland
+Count: 30
+Price: 18.71
+-------------------------------------
+---------------------------- Menu -------------------------------
+1 - Print all books.
+2 - Markup or Markdown all prices.
+3 - Change inventory count of a title.
+4 - Quit
+-----------------------------------------------------------------
+Enter choice: 
+4
+
+-> Inventory Written Out <-
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+adam.lafleur@syccuxas01:~/cs162/projects/project4> exit
+exit
+
+Script done on Tue 28 Feb 2017 06:32:50 PM PST
